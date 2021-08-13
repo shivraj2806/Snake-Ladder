@@ -1,7 +1,6 @@
 package com.Bridgelabz;
 
 public class SnakeLadder {
-
     public static final int WINNING_POSITION = 100;
     public static int PLAYER_POSITION = 0;
 
@@ -9,6 +8,7 @@ public class SnakeLadder {
         int ladder = 1;
         int snake = 2;
         int noPlay = 3;
+        int count = 0;
         System.out.println("Welcome to the Snake and Ladder Game");
 
         /**
@@ -17,6 +17,7 @@ public class SnakeLadder {
          */
         while (PLAYER_POSITION < WINNING_POSITION) {
             int Dice = (int) (Math.random() * 6 + 1);
+            count++;
             System.out.println("The Player's die number is : " + Dice);
 
             /**
@@ -49,6 +50,6 @@ public class SnakeLadder {
                     }
             }
         }
+        System.out.println("Number of times die rolled: " + count);
     }
-
 }
